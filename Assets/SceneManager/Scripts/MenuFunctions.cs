@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 
-public class MenuFunctions : MonoBehaviour {
-
+public class MenuFunctions : MonoBehaviour
+{
     public void Play()
     {
-        SceneLoader.Instance.DisplayLoadingScene();
+        // Synchronous version
+        //SceneLoader.Instance.LoadScene();
+
+        SceneLoaderAsync.Instance.LoadScene();
     }
 
     public void Exit()
